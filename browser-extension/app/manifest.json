@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "Lingomate",
+    "version": "0.1.0",
+    "description": "Search for words easily and create your own dictionary.",
+    "content_scripts": [
+        {
+            "css": [
+                "css/content.css"
+            ],
+            "js": [
+                "vendor/jquery.min.js",
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://developer.chrome.com/docs/extensions/*",
+                "https://developer.chrome.com/docs/webstore/*"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "scripts/background.js",
+        "type": "module"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "enabled": true,
+                "id": "netRequestRules",
+                "path": "netRequestRules.json"
+            }
+        ]
+    },
+    "permissions": [
+        "tts",
+        "storage",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "https://en.dict.naver.com/"
+    ],
+    "icons": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    }
+}
