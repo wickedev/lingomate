@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#__lingomate_crx__ {
+  display: block;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 300px;
+  max-height: 100%;
+  overflow-y: scroll;
+  z-index: 2147483647;
+  box-shadow: 0 0 5px #919191;
+  background: #f2f2f2;
+  font-size: 12px;
+  padding: 0.4rem 1rem;
+}
+
+#__lingomate_crx__ p.query {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+#__lingomate_crx__ span.related_word {
+  font-style: italic;
+}
+
+#__lingomate_crx__ div.example {
+  font-size: 0.8rem;
+}
